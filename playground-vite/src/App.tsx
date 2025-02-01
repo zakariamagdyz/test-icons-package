@@ -1,4 +1,10 @@
-import { Account, Notification, Search, Translation } from "@iis-ssb/icons";
+import {
+  Account,
+  Notification,
+  Search,
+  Translation,
+  React,
+} from "@iis-ssb/icons";
 import { useState } from "react";
 
 import "./App.css";
@@ -21,6 +27,9 @@ function App() {
         </div>
         <div>
           <Notification className="size-40 text-red-400" />
+        </div>
+        <div>
+          <React className="size-40 text-blue-500" />
         </div>
       </div>
       <div className="bg-white w-full h-16 ">{count}</div>
