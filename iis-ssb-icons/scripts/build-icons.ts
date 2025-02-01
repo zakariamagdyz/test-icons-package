@@ -30,7 +30,7 @@ async function buildIcons() {
     const svgSource = fs.readFileSync(svgPath, "utf-8");
 
     //  Convert SVG to a React TSX component with SVGR
-    const componentName = getComponentName(file); // e.g. "HomeIcon" from "home.svg"
+    const componentName = getComponentName(file);
     const componentCode = await transform(
       svgSource,
       {
@@ -45,6 +45,9 @@ async function buildIcons() {
         ref: true,
         jsxRuntime: "automatic",
         svgo: true,
+        svgProps: {
+          className: "iis-ssb-icon", // Add a className to the SVG to target all icons
+        },
         svgoConfig: {
           plugins: [
             {
@@ -76,7 +79,7 @@ async function buildIcons() {
 }
 
 function getComponentName(fileName: string) {
-  // e.g. "home.svg" => "HomeIcon"
+  // e.g. "home.svg" => "Home"
   const baseName = path.basename(fileName, ".svg");
   return (
     baseName.charAt(0).toUpperCase() +
