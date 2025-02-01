@@ -1,5 +1,3 @@
-// scripts/build-icons.ts
-
 import { transform } from "@svgr/core";
 import fs from "fs";
 import path from "path";
@@ -43,10 +41,11 @@ async function buildIcons() {
         icon: true,
         typescript: true,
         ref: true,
-        jsxRuntime: "automatic",
         svgo: true,
+        jsxRuntime: "automatic",
         svgProps: {
           className: "iis-ssb-icon", // Add a className to the SVG to target all icons
+          "data-testid": `iis-ssb-icon-${componentName.toLowerCase()}`,
         },
         svgoConfig: {
           plugins: [
