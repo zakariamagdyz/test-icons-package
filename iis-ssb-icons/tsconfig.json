@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "node",
+    "moduleDetection": "force",
+    "noEmit": false,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "declaration": true, // Generates .d.ts files
+    // "declarationMap": true, // Generates sourcemaps for declarations (optional)
+    "emitDeclarationOnly": false, // Ensures JS files are also emitted
+    "outDir": "./dist", // Output directory for emitted files
+    "skipLibCheck": true,
+    "strict": true,
+    "jsx": "react-jsx"
+  },
+  "include": ["src", "scripts"],
+  "exclude": ["node_modules", "dist"]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "@iis-ssb/icons",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "build": "npm run  clean && npm run  build:icons && npm run typecheck && npm run build:bundles",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist  && rm -rf ./src/generated/*.tsx",
+    "build:icons": "tsx ./scripts/build-icons.ts",
+    "build:bundles": "tsup"
+  },
+  "exports": {
+    "node": "./dist/index.cjs",
+    "require": "./dist/index.cjs",
+    "browser": "./dist/index.js",
+    "import": "./dist/index.js"
+  },
+  "keywords": [
+    "iis-ssb",
+    "icons"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "repo url"
+  },
+  "author": "Khalid A. Khalil <khalid.khalil@gizasystems.com>",
+  "description": "A collection of all icons used in IIS-SSB project",
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@svgr/core": "8.1.0",
+    "@svgr/plugin-jsx": "8.1.0",
+    "@svgr/plugin-prettier": "8.1.0",
+    "@svgr/plugin-svgo": "8.1.0",
+    "@types/node": "22.13.0",
+    "@types/react": "18.3.18",
+    "@types/react-dom": "18.3.5",
+    "tsup": "8.3.6",
+    "tsx": "4.19.2",
+    "typescript": "5.7.3"
+  }
+}
