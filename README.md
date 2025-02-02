@@ -37,11 +37,10 @@ npm run build
 ```
 
 4️⃣ Link the Package Locally
-To update your package for local development:
 
 ```sh
 
-npm link @iis-ssb/icons
+npm link
 
 ```
 
