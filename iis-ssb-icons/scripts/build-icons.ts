@@ -2,7 +2,7 @@ import { transform } from "@svgr/core";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-
+import { IconTemplate } from "../src/IconTemplate";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -42,9 +42,10 @@ async function buildIcons() {
         typescript: true,
         ref: true,
         svgo: true,
-        jsxRuntime: "automatic",
+        template: IconTemplate,
+        jsxRuntime: "classic",
+        expandProps: "end",
         svgProps: {
-          className: "iis-ssb-icon", // Add a className to the SVG to target all icons
           "data-testid": `iis-ssb-icon-${componentName.toLowerCase()}`,
         },
         svgoConfig: {

@@ -3,7 +3,8 @@ import {
   Notification,
   Search,
   Translation,
-  React,
+  ReactIcon,
+  FilledGrid,
 } from "@iis-ssb/icons";
 import { useState } from "react";
 
@@ -16,21 +17,22 @@ function App() {
     <>
       <div className="flex gap-4 items-center justify-between mb-8 text-white">
         <div className="text-6xl  text-yellow-400">
-          <Search />
+          <Search className="size-24" />
         </div>
-        <div className="text-6xl text-amber-700">
-          <Translation />
+        <div className="text-3xl text-amber-700">
+          <Translation size={"1em"} />
         </div>
 
         <div>
-          <Account className="size-40 text-blue-500" />
+          <Account size={80} className="text-red-400" />
         </div>
         <div>
-          <Notification className="size-40 text-red-400" />
+          <Notification className="text-red-400" variant="outline" />
         </div>
         <div>
-          <React className="size-40 text-blue-500" />
+          <ReactIcon className="text-blue-500" variant="default" />
         </div>
+        <FilledGrid color="yellow" />
       </div>
       <div className="bg-white w-full h-16 ">{count}</div>
       <h1>Vite + React</h1>
