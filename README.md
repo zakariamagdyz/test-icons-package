@@ -76,8 +76,8 @@ function App() {
 
 ✅ **Ref attribute support** – Allows DOM manipulation, measuring positions, and enabling dynamic animations.
 
-✅ **Consistent class names** – Applies a generic `className` to all generated icons for easy styling.
+✅ **Consistent class names** – Applies a generic and custom `className` to all generated icons for easy styling.
 
 ✅ **Flexible color control** – Icons inherit color from their parent, simplifying theme consistency.
 
-✅ **Scalable sizing** – Supports setting width/height manually or using `em` units for dynamic scaling, ensuring smooth alignment with responsive typography of MUI
+✅ **Scalable sizing** – Supports setting width/height manually or using size attr or using `em` units for dynamic scaling, ensuring smooth alignment with responsive typography of MUI
