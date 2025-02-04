@@ -26,7 +26,7 @@
     "type": "git",
     "url": "repo url"
   },
-  "author": "Khalid A. Khalil <khalid.khalil@gizasystems.com>",
+  "author": "",
   "description": "A collection of all icons used in IIS-SSB project",
   "engines": {
     "node": ">=18"
